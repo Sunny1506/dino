@@ -5,19 +5,49 @@
              Shell.NavBarIsVisible="False">
 
        <Grid>
-              <Image Source="background.png"
-                     Aspect="AspectFill"
-                     HorizontalOptions="Fill"
-                     VerticalOptions="Fill"/>
-              <Image Source="montain.png"/>
-              <Image Source="houseofsnoopy.png"
-                     HeightRequest="50"
-                     WidthRequest="50"
-                     HorizontalOptions="End"
-                     VerticalOptions="Center"/>
-              <Image Source="graminha.png"
-                      HorizontalOptions="End"
-                      VerticalOptions="End"/>
+              <HorizontalStackLayout x:Name="Layer1">
+                     <Image Source="background.png"
+                            Aspect="AspectFit"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="Fill"/>
+                     <Image Source="background.png"
+                            Aspect="AspectFit"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="Fill"/>
+                     <Image Source="background.png"
+                            Aspect="AspectFit"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="Fill"/>
+              </HorizontalStackLayout>
+
+              <HorizontalStackLayout x:Name="Layer2">
+                     <Image Source="predios.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="End"/>
+                     <Image Source="predios.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="End"/>
+                     <Image Source="predios.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="End"/>
+              </HorizontalStackLayout>
+
+              <HorizontalStackLayout x:Name="Layer3">
+                     <Image Source="chao.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="End"
+                            HeightRequest="80"/>
+                     <Image Source="chao.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="End"
+                            HeightRequest="80"/>
+                     <Image Source="chao.png"
+                            HorizontalOptions="End"
+                            VerticalOptions="End"
+                            HeightRequest="80"/>
+              </HorizontalStackLayout>
+
+
 
 
 
