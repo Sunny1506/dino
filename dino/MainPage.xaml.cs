@@ -37,16 +37,40 @@ public partial class MainPage : ContentPage
 	}
 	void CorrigeTamanhoCenario (double w, double h)
 	{
-		foreaach (var A in Layer1.Children)
-		(A as Image).WidthRequest = w;
-		foreaach (var A in Layer2.Children)
-		(A as Image).WidthRequest = w;
-		foreaach (var A in Layer3.Children)
-		(A as Image).WidthRequest = w;
+		foreach (var a in Layer1.Children)
+		(a as Image).WidthRequest = w;
+		foreach (var a in Layer2.Children)
+		(a as Image).WidthRequest = w;
+		foreach (var a in Layer3.Children)
+		(a as Image).WidthRequest = w;
 		
 		Layer1.WidthRequest = w * 1.5;
 		Layer2.WidthRequest = w * 1.5;
 		Layer3.WidthRequest = w * 1.5;
+	}
+	void GerenciaCenarios()
+	{
+		MoveCenario();
+		GerenciaCenarios (Layer1);
+		GerenciaCenarios (Layer2);
+		GerenciaCenarios (Layer3);
+		
+	}
+	void MoveCenario()
+	{
+		Layer1.TranslationX -= velocidade1;
+		Layer2.TranslationX -= velocidade2;
+		Layer3.TranslationX -= velocidade3;
+	}
+	void GerenciaCenarios(HorizontalStackLayout horizontalStackLayout)
+	{
+		var view = (horizontalStackLayout.Children.First() as Image);
+		if (view.WidthRequest + horizontalStackLayout.TranslationX < 0)
+		{
+			horizontalStackLayout.Children.Remove(view);
+			horizontalStackLayout.Children.Add(view);
+			horizontalStackLayout.TranslationX = view.TranslationX;
+		}
 	}
 
 }

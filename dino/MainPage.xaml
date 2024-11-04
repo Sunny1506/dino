@@ -7,41 +7,47 @@
        <Grid>
               <HorizontalStackLayout x:Name="Layer1">
                      <Image Source="background.png"
-                            Aspect="AspectFit"
+                            Aspect="Fill"
                             HorizontalOptions="Fill"
                             VerticalOptions="Fill"/>
                      <Image Source="background.png"
-                            Aspect="AspectFit"
+                            Aspect="Fill"
                             HorizontalOptions="Fill"
                             VerticalOptions="Fill"/>
                      <Image Source="background.png"
-                            Aspect="AspectFit"
+                            Aspect="Fill"
                             HorizontalOptions="Fill"
                             VerticalOptions="Fill"/>
               </HorizontalStackLayout>
 
               <HorizontalStackLayout x:Name="Layer2">
                      <Image Source="predios.png"
+                            Aspect="Fill"
                             HorizontalOptions="End"
-                            VerticalOptions="End"/>
+                            VerticalOptions="Fill"/>
                      <Image Source="predios.png"
+                            Aspect="Fill"
                             HorizontalOptions="End"
-                            VerticalOptions="End"/>
+                            VerticalOptions="Fill"/>
                      <Image Source="predios.png"
+                            Aspect="Fill"
                             HorizontalOptions="End"
-                            VerticalOptions="End"/>
+                            VerticalOptions="Fill"/>
               </HorizontalStackLayout>
 
               <HorizontalStackLayout x:Name="Layer3">
                      <Image Source="chao.png"
+                            Aspect="AspectFill"
                             HorizontalOptions="End"
                             VerticalOptions="End"
                             HeightRequest="80"/>
                      <Image Source="chao.png"
+                            Aspect="AspectFill"
                             HorizontalOptions="End"
                             VerticalOptions="End"
                             HeightRequest="80"/>
                      <Image Source="chao.png"
+                            Aspect="AspectFill"
                             HorizontalOptions="End"
                             VerticalOptions="End"
                             HeightRequest="80"/>
