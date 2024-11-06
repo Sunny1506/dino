@@ -13,6 +13,7 @@ public partial class MainPage : ContentPage
 	int velocidade = 0;
 	int larguraJanela = 0;
 	int alturaJanela = 0;
+	 
 
 
 
@@ -72,6 +73,20 @@ public partial class MainPage : ContentPage
 			horizontalStackLayout.TranslationX = view.TranslationX;
 		}
 	}
+	async Task  Desenha()
+	{
+		while (!estaMorto)
+		{
+			GerenciaCenarios()
+			await Task.Delay (tempoEntreFrames);
+		}
+	}
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+		Desenha();
+    }
+
 
 }
 
