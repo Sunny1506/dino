@@ -77,7 +77,7 @@ public partial class MainPage : ContentPage
 	{
 		while (!estaMorto)
 		{
-			GerenciaCenarios()
+			GerenciaCenarios();
 			await Task.Delay (tempoEntreFrames);
 		}
 	}
