@@ -5,16 +5,20 @@
              Shell.NavBarIsVisible="False">
 
        <Grid>
+              <Image Source="player01"
+                     x:Name="imgplayer"
+                     HorizontalOptions="Start"
+                     VerticalOptions="End"/>
               <HorizontalStackLayout x:Name="Layer1">
-                     <Image Source="background.png"
+                     <Image Source="background.jpg"
                             Aspect="Fill"
                             HorizontalOptions="Fill"
                             VerticalOptions="Fill"/>
-                     <Image Source="background.png"
+                     <Image Source="background.jpg"
                             Aspect="Fill"
                             HorizontalOptions="Fill"
                             VerticalOptions="Fill"/>
-                     <Image Source="background.png"
+                     <Image Source="background.jpg"
                             Aspect="Fill"
                             HorizontalOptions="Fill"
                             VerticalOptions="Fill"/>
