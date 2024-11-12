@@ -5,10 +5,7 @@
              Shell.NavBarIsVisible="False">
 
        <Grid>
-              <Image Source="player01"
-                     x:Name="imgplayer"
-                     HorizontalOptions="Start"
-                     VerticalOptions="End"/>
+
               <HorizontalStackLayout x:Name="Layer1">
                      <Image Source="background.jpg"
                             Aspect="Fill"
@@ -25,15 +22,15 @@
               </HorizontalStackLayout>
 
               <HorizontalStackLayout x:Name="Layer2">
-                     <Image Source="predios.png"
+                     <Image Source="montains.png"
                             Aspect="Fill"
                             HorizontalOptions="End"
                             VerticalOptions="Fill"/>
-                     <Image Source="predios.png"
+                     <Image Source="montains.png"
                             Aspect="Fill"
                             HorizontalOptions="End"
                             VerticalOptions="Fill"/>
-                     <Image Source="predios.png"
+                     <Image Source="montains.png"
                             Aspect="Fill"
                             HorizontalOptions="End"
                             VerticalOptions="Fill"/>
@@ -57,9 +54,12 @@
                             HeightRequest="80"/>
               </HorizontalStackLayout>
 
-
-
-
+              <Image Source="player01.png"
+                     x:Name="imgPlayer"
+                     HeightRequest="320"
+                     WidthRequest="100"
+                     HorizontalOptions="Start"
+                     VerticalOptions="End"/>
 
        </Grid>
 

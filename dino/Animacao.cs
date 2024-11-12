@@ -2,9 +2,9 @@ namespace dino;
 
 public class Animacao
 {
-    protected List<String> Animacao1 = new List<String>();
-    protected List<String> Animacao2 = new List<String>();
-    protected List<String> Animacao3 = new List<String>();
+    protected List<String> animacao1 = new List<String>();
+    protected List<String> animacao2 = new List<String>();
+    protected List<String> animacao3 = new List<String>();
     protected bool loop = true;
     protected int AnimacaoAtiva = 1;
     bool parado = true;
@@ -34,18 +34,18 @@ public class Animacao
         int TamanhoAnimacao = 0;
         if (AnimacaoAtiva == 1)
         {
-            NomeArquivo = Animacao1[frameAtual];
-            TamanhoAnimacao = Animacao1.Count;
+            NomeArquivo = animacao1[frameAtual];
+            TamanhoAnimacao = animacao1.Count;
         }
         else if (AnimacaoAtiva == 2)
         {
-            NomeArquivo = Animacao2[frameAtual];
-            TamanhoAnimacao = Animacao2.Count;
+            NomeArquivo = animacao2[frameAtual];
+            TamanhoAnimacao = animacao2.Count;
         }
         else if (AnimacaoAtiva == 3)
         {
-            NomeArquivo = Animacao3[frameAtual];
-            TamanhoAnimacao = Animacao3.Count;
+            NomeArquivo = animacao3[frameAtual];
+            TamanhoAnimacao = animacao3.Count;
         }
         compImage.Source = ImageSource.FromFile(NomeArquivo);
         frameAtual++;
