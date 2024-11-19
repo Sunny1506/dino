@@ -1,4 +1,5 @@
 namespace dino;
+using FFImageLoading.Maui;
 
 public class Animacao
 {
@@ -10,9 +11,9 @@ public class Animacao
     bool parado = true;
     int frameAtual = 1;
     protected CachedImageView imageView;
-    public Animacao(CachedImagrView a)
+    public Animacao(CachedImageView a)
     {
-        compImage = a;
+        imageView = a;
     }
     public void Stop()
     {
@@ -47,7 +48,7 @@ public class Animacao
             NomeArquivo = animacao3[frameAtual];
             TamanhoAnimacao = animacao3.Count;
         }
-        compImage.Source = ImageSource.FromFile(NomeArquivo);
+        imageView.Source = ImageSource.FromFile(NomeArquivo);
         frameAtual++;
         if (frameAtual >= TamanhoAnimacao)
         {

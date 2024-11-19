@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic;
+using FFImageLoading.Maui;
 
 namespace dino;
 
@@ -13,14 +14,14 @@ public partial class MainPage : ContentPage
 	int velocidade = 0;
 	int larguraJanela = 0;
 	int alturaJanela = 0;
-	const int forcaGravidade = 6;
+	const int forcaGravidade = 10;
 	bool estanoChao = true;
 	bool estanoAr = false;
 	int tempoPulando = 0;
 	int temponoAr = 0;
-	const int forcaPulo = 8;
-	const int maxTempoPulando = 6;
-	const int maxTemponoAr = 4;
+	const int forcaPulo = 10;
+	const int maxTempoPulando = 10;
+	const int maxTemponoAr = 5;
 	Player player;
 
 
@@ -84,31 +85,34 @@ public partial class MainPage : ContentPage
 			horizontalStackLayout.TranslationX = view.TranslationX;
 		}
 	}
+
 	async Task Desenha()
 	{
 		while (!estaMorto)
 		{
 			GerenciaCenarios();
-			player.Desenha();
+			if (!estaPulando && !estanoAr)
+			{
+				AplicaGravidade();
+				player.Desenha();
+			}
+			else
+				AplicaPulo();
 			await Task.Delay(tempoEntreFrames);
 		}
+
+
 	}
-	protected override void OnAppearing()
+	void AplicaGravidade()
 	{
-		base.OnAppearing();
-		Desenha();
+		if (player.GetY() < 0)
+			player.MoveY(forcaGravidade);
+		else if (player.GetY() >= 0)
+		{
+			player.SetY(0);
+			estanoChao = true;
+		}
 	}
-	
-void AplicaGravidade()
-{
-	if (player.GetY() < 0)
-	player.MoveY (forcaGravidade);
-	else if (player.GetY() >=0)
-	{
-		player.SetY (0);
-		estanoChao = true;
-	}
-}
 	void AplicaPulo()
 	{
 		estanoChao = false;
@@ -132,6 +136,18 @@ void AplicaGravidade()
 		}
 		else if (estanoAr)
 			temponoAr++;
+	}
+
+	protected override void OnAppearing()
+	{
+		base.OnAppearing();
+		Desenha();
+	}
+
+	void OnGridClicked(object o, TappedEventArgs a)
+	{
+		if (estanoChao)
+			estaPulando = true;
 	}
 
 }
