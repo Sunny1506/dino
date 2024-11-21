@@ -1,8 +1,10 @@
 using Microsoft.Maui.Platform;
 
+
 public class Enemy
 {
-    public Inimigo(imagem a)
+    Image imageView;
+    public Enemy (Image a)
     {
         imageView = a;
     }
@@ -13,10 +15,10 @@ public class Enemy
     }
     public double GetX()
     {
-        return imageView.TranlationX;
+        return imageView.TranslationX;
     }
     public void Reset()
     {
-        imageView.TranlationX = 500;
+        imageView.TranslationX = 500;
     }
 }

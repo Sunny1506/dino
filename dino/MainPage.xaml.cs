@@ -19,9 +19,9 @@ public partial class MainPage : ContentPage
 	bool estanoAr = false;
 	int tempoPulando = 0;
 	int temponoAr = 0;
-	const int forcaPulo = 10;
-	const int maxTempoPulando = 10;
-	const int maxTemponoAr = 3;
+	const int forcaPulo = 15;
+	const int maxTempoPulando = 12;
+	const int maxTemponoAr = 8;
 	Player player;
 
 

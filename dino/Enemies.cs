@@ -1,6 +1,7 @@
+
 public class Enemies
 {
-    List<Enemy> Enemies = new List<Enemies>();
+    List<Enemy> enemies = new List<Enemy>();
     Enemy atual = null;
     double minX = 0;
     public Enemies(double a)
@@ -9,7 +10,7 @@ public class Enemies
     }
     public void Add(Enemy a)
     {
-        Enemies.Add(a);
+        enemies.Add(a);
         if (atual == null)
             atual = a;
         Iniciar();
@@ -25,7 +26,7 @@ public class Enemies
         {
             Iniciar();
             var r = Random.Shared.Next(0, enemies.Count);
-            atual = Enemies[r];
+            atual = enemies[r];
         }
     }
     public void Desenha(int veloc)
