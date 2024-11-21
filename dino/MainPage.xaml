@@ -67,6 +67,30 @@
                                   WidthRequest="100"
                                   HorizontalOptions="Start"
                                   VerticalOptions="End"/>
+              <Image Source="enemy01"
+                     x:Name="imgEnemy1"
+                     HeightRequest="150"
+                     WidthRequest="100"
+                     HorizontalOptions="End"
+                     VerticalOptions="End"/>
+              <Image Source="enemy02"
+                     x:Name="imgEnemy2"
+                     HeightRequest="150"
+                     WidthRequest="100"
+                     HorizontalOptions="End"
+                     VerticalOptions="End"/>
+              <Image Source="enemy03"
+                     x:Name="imgEnemy3"
+                     HeightRequest="150"
+                     WidthRequest="100"
+                     HorizontalOptions="End"
+                     VerticalOptions="End"/>
+              <Image Source="enemy04"
+                     x:Name="imgEnemy4"
+                     HeightRequest="150"
+                     WidthRequest="100"
+                     HorizontalOptions="End"
+                     VerticalOptions="End"/>
 
        </Grid>
 

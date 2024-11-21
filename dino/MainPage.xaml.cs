@@ -21,7 +21,7 @@ public partial class MainPage : ContentPage
 	int temponoAr = 0;
 	const int forcaPulo = 10;
 	const int maxTempoPulando = 10;
-	const int maxTemponoAr = 5;
+	const int maxTemponoAr = 3;
 	Player player;
 
 
@@ -33,12 +33,17 @@ public partial class MainPage : ContentPage
 		player = new Player(imgPlayer);
 		player.Run();
 	}
-
+	Enemies enemies;
 	protected override void OnSizeAllocated(double w, double h)
 	{
 		base.OnSizeAllocated(w, h);
 		CorrigeTamanhoCenario(w, h);
 		CalculaVelocidade(w);
+		enemies = new Enemies(-w);
+		enemies.Add(new Enemy(imgEnemy1));
+		enemies.Add(new Enemy(imgEnemy2));
+		enemies.Add(new Enemy(imgEnemy3));
+		enemies.Add(new Enemy(imgEnemy4));
 	}
 	void CalculaVelocidade(double w)
 	{
@@ -91,6 +96,8 @@ public partial class MainPage : ContentPage
 		while (!estaMorto)
 		{
 			GerenciaCenarios();
+			if (enemies != null)
+				enemies.Desenha(velocidade);
 			if (!estaPulando && !estanoAr)
 			{
 				AplicaGravidade();
@@ -149,6 +156,7 @@ public partial class MainPage : ContentPage
 		if (estanoChao)
 			estaPulando = true;
 	}
+
 
 }
 
